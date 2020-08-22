@@ -21,6 +21,7 @@
 		84FC018824F0F24C001763D4 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84FC018024F0F24B001763D4 /* RxSwift.framework */; };
 		84FC018D24F0F395001763D4 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84FC016F24F0EA61001763D4 /* Alamofire.framework */; };
 		84FC018E24F0F395001763D4 /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 84FC016F24F0EA61001763D4 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		84FC019224F0F553001763D4 /* QiitaApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FC019124F0F553001763D4 /* QiitaApiClient.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +76,7 @@
 		84FC017F24F0F24B001763D4 /* RxBlocking.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxBlocking.framework; path = Carthage/Build/iOS/RxBlocking.framework; sourceTree = "<group>"; };
 		84FC018024F0F24B001763D4 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
 		84FC018124F0F24B001763D4 /* RxTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxTest.framework; path = Carthage/Build/iOS/RxTest.framework; sourceTree = "<group>"; };
+		84FC019124F0F553001763D4 /* QiitaApiClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QiitaApiClient.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,6 +133,7 @@
 		84FC013B24F0E002001763D4 /* Qiita Viewer */ = {
 			isa = PBXGroup;
 			children = (
+				84FC019024F0F553001763D4 /* API */,
 				84FC013C24F0E002001763D4 /* AppDelegate.swift */,
 				84FC013E24F0E002001763D4 /* SceneDelegate.swift */,
 				84FC014024F0E002001763D4 /* ViewController.swift */,
@@ -171,6 +174,14 @@
 				84FC016F24F0EA61001763D4 /* Alamofire.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		84FC019024F0F553001763D4 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				84FC019124F0F553001763D4 /* QiitaApiClient.swift */,
+			);
+			path = API;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -330,6 +341,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84FC019224F0F553001763D4 /* QiitaApiClient.swift in Sources */,
 				84FC014124F0E002001763D4 /* ViewController.swift in Sources */,
 				84FC013D24F0E002001763D4 /* AppDelegate.swift in Sources */,
 				84FC013F24F0E002001763D4 /* SceneDelegate.swift in Sources */,
