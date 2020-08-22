@@ -10,31 +10,49 @@ import Foundation
 import Alamofire
 
 protocol APIClient {
-    var api_token: String { get }
-    var auth_header: HTTPHeaders { get }
+    var apiToken: String { get }
+    var authHeader: HTTPHeaders { get }
+    var url: String? { get }
     
-    func getRequest(_ userName: String) -> DataRequest
+    
+    func getRequest() -> DataRequest
 }
 
 class QiitaApiClient: APIClient {
     
-    let api_token = "e738e431f62c3545463e3326228dc0b5a48f4522"
-    let auth_header: HTTPHeaders
+    let apiToken = "e738e431f62c3545463e3326228dc0b5a48f4522"
+    let authHeader: HTTPHeaders
+    var url: String?
     
     init() {
-        auth_header = [
-            "Authorization" : "Bearer " + api_token
+        authHeader = [
+            "Authorization" : "Bearer " + apiToken
         ]
     }
     
-    func getRequest(_ userName: String) -> DataRequest {
-        
-        let url = "https://qiita.com/api/v2/users/\(userName)/items?page=1&per_page=100"
-        
+    func getRequest() -> DataRequest {
         return AF.request(
-            url,
+            url!,
             method: .get,
-            headers: auth_header
+            headers: authHeader
         )
+    }
+    
+    func requestHandler(_ str: String) -> DataRequest {
+        if str.isEmpty {
+            setUrlLatestItem()
+            return getRequest()
+        } else {
+            setUrlUserItem(str)
+            return getRequest()
+        }
+    }
+    
+    func setUrlLatestItem() {
+        url = "https://qiita.com/api/v2/items?page=1&per_page=100"
+    }
+    
+    func setUrlUserItem(_ userName: String) {
+        url = "https://qiita.com/api/v2/users/\(userName)/items?page=1&per_page=100"
     }
 }
