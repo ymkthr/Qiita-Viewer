@@ -9,6 +9,7 @@
 import UIKit
 import RxSwift
 import RxCocoa
+import SafariServices
 
 class ArticleListViewController: UIViewController {
     
@@ -21,10 +22,12 @@ class ArticleListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // サーチバーに入力された文字をviewModelにバインディング
         self.searchBar.rx.text.orEmpty
             .bind(to: self.viewModel.searchWord)
             .disposed(by: self.disposeBag)
         
+        // 取得された記事をtableViewにバインディング
         self.viewModel.articleList.asObservable()
             .bind(to: self.tableView.rx.items(cellIdentifier: "CustomCell", cellType: CustomCell.self)) { row, article, cell in
                 cell.titleLabel?.text = article.title
@@ -35,5 +38,16 @@ class ArticleListViewController: UIViewController {
                 cell.iconImageView?.image = UIImage(url: article.user.profile_image_url)
             }
             .disposed(by: self.disposeBag)
+        
+        // タップした記事をWebViewで開く
+        self.tableView.rx.modelSelected(Article.self)
+            .subscribe(onNext: { article in
+                let url = URL(string: article.url)
+                if let url = url{
+                    let safariViewController = SFSafariViewController(url: url)
+                    self.present(safariViewController, animated: true, completion: nil)
+                }
+            })
+            .disposed(by: disposeBag)
     }
 }
