@@ -6,8 +6,6 @@
 //  Copyright © 2020 Katsuhiro Yamauchi. All rights reserved.
 //
 
-import Foundation
-
 struct Article: Codable {
     let title: String
     let created_at: String

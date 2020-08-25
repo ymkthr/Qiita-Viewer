@@ -6,8 +6,6 @@
 //  Copyright © 2020 Katsuhiro Yamauchi. All rights reserved.
 //
 
-import Foundation
-
 struct User: Codable {
     let id: String
     let profile_image_url: String

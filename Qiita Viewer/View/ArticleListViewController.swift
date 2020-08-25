@@ -26,9 +26,13 @@ class ArticleListViewController: UIViewController {
             .disposed(by: self.disposeBag)
         
         self.viewModel.articleList.asObservable()
-            .bind(to: self.tableView.rx.items(cellIdentifier: "Cell")) { row, article, cell in
-                cell.textLabel?.text = article.title
-                cell.detailTextLabel?.text = article.url
+            .bind(to: self.tableView.rx.items(cellIdentifier: "CustomCell", cellType: CustomCell.self)) { row, article, cell in
+                cell.titleLabel?.text = article.title
+                cell.urlLabel?.text = article.url
+                cell.userNameLabel?.text = "@" + article.user.id
+                cell.likeCountLabel?.text = "LGTM: " + article.lgtm
+                cell.dateCreatedLabel?.text = "投稿日: " + article.date
+                cell.iconImageView?.image = UIImage(url: article.user.profile_image_url)
             }
             .disposed(by: self.disposeBag)
     }
