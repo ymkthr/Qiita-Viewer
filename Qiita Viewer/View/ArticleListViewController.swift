@@ -24,12 +24,12 @@ class ArticleListViewController: UIViewController {
         super.viewDidLoad()
         
         // サーチバーに入力された文字をviewModelにバインディング
-        self.searchBar.rx.text.orEmpty
+        searchBar.rx.text.orEmpty
             .bind(to: self.viewModel.searchWord)
             .disposed(by: self.disposeBag)
         
         // 取得された記事をtableViewにバインディング
-        self.viewModel.articleList.asObservable()
+        viewModel.articleList.asObservable()
             .bind(to: self.tableView.rx.items(cellIdentifier: "CustomCell", cellType: CustomCell.self)) { row, article, cell in
                 cell.titleLabel?.text = article.title
                 cell.urlLabel?.text = article.url
@@ -41,7 +41,7 @@ class ArticleListViewController: UIViewController {
             .disposed(by: self.disposeBag)
         
         // タップした記事をWebViewで開く
-        self.tableView.rx.modelSelected(Article.self)
+        tableView.rx.modelSelected(Article.self)
             .subscribe(onNext: { article in
                 let url = URL(string: article.url)
                 if let url = url{
@@ -52,7 +52,7 @@ class ArticleListViewController: UIViewController {
             .disposed(by: disposeBag)
         
         // インジケーター
-        self.viewModel.isLoading.subscribe(onNext: { bool in
+        viewModel.isLoading.subscribe(onNext: { bool in
             bool ? HUD.show(.progress) : HUD.hide()
             })
             .disposed(by: disposeBag)
