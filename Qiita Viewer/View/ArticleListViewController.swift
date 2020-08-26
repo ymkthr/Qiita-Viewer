@@ -10,6 +10,7 @@ import UIKit
 import RxSwift
 import RxCocoa
 import SafariServices
+import PKHUD
 
 class ArticleListViewController: UIViewController {
     
@@ -47,6 +48,12 @@ class ArticleListViewController: UIViewController {
                     let safariViewController = SFSafariViewController(url: url)
                     self.present(safariViewController, animated: true, completion: nil)
                 }
+            })
+            .disposed(by: disposeBag)
+        
+        // インジケーター
+        self.viewModel.isLoading.subscribe(onNext: { bool in
+            bool ? HUD.show(.progress) : HUD.hide()
             })
             .disposed(by: disposeBag)
     }

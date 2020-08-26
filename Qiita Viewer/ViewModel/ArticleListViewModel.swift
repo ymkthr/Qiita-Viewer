@@ -10,19 +10,24 @@ import RxSwift
 import RxCocoa
 
 class ArticleListViewModel {
-    var searchWord         = PublishRelay<String>()
-    var articleList        = PublishRelay<[Article]>()
+    let searchWord         = PublishRelay<String>()
+    let articleList        = PublishRelay<[Article]>()
+    let isLoading          = BehaviorSubject<Bool>(value: false)
     private let disposeBag = DisposeBag()
     private let model      = ArticleListModel()
     
     init() {
         searchWord.asObservable()
             .debounce(.milliseconds(500), scheduler: MainScheduler.instance)
-            .flatMapLatest { [unowned self] str in
+            .flatMapLatest { [unowned self] str -> Observable<[Article]> in
+                self.isLoading.onNext(true)
                 return self.model.fetchArticles(str)
                 /* searchWordが空文字 -> 新着記事を取得
                    searchWordに文字有 -> ユーザーの記事を取得 */
             }
+            .do(onNext: { _ in
+                self.isLoading.onNext(false)
+            })
             .bind(to: self.articleList)
             .disposed(by: self.disposeBag)
     }
