@@ -10,6 +10,7 @@
 		842AAE4324F3E692003173D6 /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842AAE4224F3E692003173D6 /* CustomCell.swift */; };
 		842AAE4724F410F1003173D6 /* Article+ComputedProperty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842AAE4624F410F1003173D6 /* Article+ComputedProperty.swift */; };
 		844899D424F4CFB100994B57 /* UIImage+ConvertionStringToURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844899D324F4CFB100994B57 /* UIImage+ConvertionStringToURL.swift */; };
+		844899D924F61B4E00994B57 /* PKHUD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 844899D824F61B4E00994B57 /* PKHUD.framework */; };
 		84FC013D24F0E002001763D4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FC013C24F0E002001763D4 /* AppDelegate.swift */; };
 		84FC013F24F0E002001763D4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FC013E24F0E002001763D4 /* SceneDelegate.swift */; };
 		84FC014624F0E003001763D4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84FC014524F0E003001763D4 /* Assets.xcassets */; };
@@ -66,6 +67,7 @@
 		842AAE4224F3E692003173D6 /* CustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
 		842AAE4624F410F1003173D6 /* Article+ComputedProperty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Article+ComputedProperty.swift"; sourceTree = "<group>"; };
 		844899D324F4CFB100994B57 /* UIImage+ConvertionStringToURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+ConvertionStringToURL.swift"; sourceTree = "<group>"; };
+		844899D824F61B4E00994B57 /* PKHUD.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PKHUD.framework; path = Carthage/Build/iOS/PKHUD.framework; sourceTree = "<group>"; };
 		84FC013924F0E002001763D4 /* Qiita Viewer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Qiita Viewer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		84FC013C24F0E002001763D4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		84FC013E24F0E002001763D4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -101,6 +103,7 @@
 				84FC018824F0F24C001763D4 /* RxSwift.framework in Frameworks */,
 				84FC018224F0F24B001763D4 /* RxCocoa.framework in Frameworks */,
 				84FC017024F0EA61001763D4 /* Alamofire.framework in Frameworks */,
+				844899D924F61B4E00994B57 /* PKHUD.framework in Frameworks */,
 				84FC018D24F0F395001763D4 /* Alamofire.framework in Frameworks */,
 				84FC019D24F11350001763D4 /* RxRelay.framework in Frameworks */,
 			);
@@ -191,6 +194,7 @@
 		84FC016E24F0EA61001763D4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				844899D824F61B4E00994B57 /* PKHUD.framework */,
 				84FC017F24F0F24B001763D4 /* RxBlocking.framework */,
 				84FC017D24F0F24B001763D4 /* RxCocoa.framework */,
 				84FC017E24F0F24B001763D4 /* RxRelay.framework */,
@@ -378,6 +382,7 @@
 				"$(SRCROOT)/Carthage/Build/iOS/RxSwift.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/RxCocoa.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/RxRelay.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/PKHUD.framework",
 			);
 			outputFileListPaths = (
 			);
@@ -582,6 +587,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "net.ymkthr.Qiita-Viewer";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
