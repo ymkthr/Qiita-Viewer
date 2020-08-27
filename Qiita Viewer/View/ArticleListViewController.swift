@@ -23,6 +23,8 @@ class ArticleListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        searchBar.placeholder = "ユーザー名で検索"
+        
         // サーチバーに入力された文字をviewModelにバインディング
         searchBar.rx.text.orEmpty
             .bind(to: self.viewModel.searchWord)
