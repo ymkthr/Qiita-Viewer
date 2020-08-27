@@ -22,7 +22,6 @@ class ArticleListModel {
                         var articles: [Article] = []
                         do {
                             articles = try decoder.decode([Article].self, from: response.data!)
-                            print(articles)
                         } catch {
                             print(error.localizedDescription)
                         }
