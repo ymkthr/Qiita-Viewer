@@ -28,7 +28,7 @@ class ArticleListViewModel {
             .do(onNext: { _ in
                 self.isLoading.onNext(false)
             })
-            .bind(to: self.articleList)
-            .disposed(by: self.disposeBag)
+            .bind(to: articleList)
+            .disposed(by: disposeBag)
     }
 }
