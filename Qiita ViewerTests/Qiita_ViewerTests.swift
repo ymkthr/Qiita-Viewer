@@ -7,6 +7,10 @@
 //
 
 import XCTest
+import RxSwift
+import RxCocoa
+import RxTest
+import RxBlocking
 @testable import Qiita_Viewer
 
 class Qiita_ViewerTests: XCTestCase {
@@ -19,9 +23,16 @@ class Qiita_ViewerTests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func testQiitaApiClient_requestHandler() throws {
+        
+        let client = QiitaApiClient()
+        
+        client.requestHandler("qiita").response { _ in
+            return
+        }
+        
+        let exect = "https://qiita.com/api/v2/users/qiita/items?page=1&per_page=100"
+        XCTAssertEqual (client.url, exect)
     }
 
     func testPerformanceExample() throws {
