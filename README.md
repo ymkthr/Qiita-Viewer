@@ -6,7 +6,7 @@ Qiitaのビューワーアプリです。
 ```
 git clone https://github.com/ymkthr/Qiita-Viewer.git
 cd Qiita-Viewer
-open "Qiita Viewer.xcodeproj"
+open "Qiita Viewer.xcworkspace"
 ```
 
 [![Github issues](https://img.shields.io/github/issues/ymkthr/Qiita-Viewer)](https://github.com/ymkthr/Qiita-Viewer/issues)
@@ -16,5 +16,10 @@ open "Qiita Viewer.xcodeproj"
 # Demo
 ![Demo](resources/file-0.gif)
 
-# Tags
-`iOS` `Swift` `RxSwift` `Alamofire` `PKUHD`
+# Library
+- Package Manager
+  - Carthage
+  - Cocoapods
+- RxSwift (MVVM構築)
+- Alamofire (Qiita投稿取得)
+- PKUHD (API通信中インジケーター表示)
