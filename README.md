@@ -22,4 +22,4 @@ open "Qiita Viewer.xcworkspace"
   - Cocoapods
 - RxSwift (MVVM構築)
 - Alamofire (Qiita投稿取得)
-- PKUHD (API通信中インジケーター表示)
+- PKHUD (API通信中インジケーター表示)
