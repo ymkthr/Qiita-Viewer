@@ -13,10 +13,11 @@ extension Article {
                return String(date)
            }
        }
+    
     var lgtm: String {
         get {
-            let int = likes_count.description
-            return int
+            let str = likes_count.description
+            return str
         }
     }
     

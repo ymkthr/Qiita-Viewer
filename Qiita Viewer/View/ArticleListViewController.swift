@@ -46,7 +46,7 @@ class ArticleListViewController: UIViewController {
         
         // タップした記事をWebViewで開く
         tableView.rx.modelSelected(Article.self)
-            .subscribe(onNext: { article in
+            .subscribe(onNext: { [unowned self] article in
                 let url = URL(string: article.url)
                 if let url = url{
                     let safariViewController = SFSafariViewController(url: url)
