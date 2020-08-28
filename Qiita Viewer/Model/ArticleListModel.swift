@@ -28,7 +28,7 @@ class ArticleListModel {
                         observer.onNext(articles)
                         observer.onCompleted()
                     case .failure(let error):
-                        print(error)
+                        print(error.localizedDescription)
                 }
             }
             return Disposables.create { request.cancel() }

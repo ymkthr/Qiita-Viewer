@@ -1,0 +1,6 @@
+framework module Pods_Qiita_ViewerTests {
+  umbrella header "Pods-Qiita ViewerTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
