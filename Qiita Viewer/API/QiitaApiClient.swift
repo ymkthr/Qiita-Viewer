@@ -39,19 +39,11 @@ class QiitaApiClient: APIClient {
     
     func requestHandler(_ str: String) -> DataRequest {
         if str.isEmpty {
-            setUrlLatestItem()
+            url = "https://qiita.com/api/v2/items?page=1&per_page=100"
             return getRequest()
         } else {
-            setUrlUserItem(str)
+            url = "https://qiita.com/api/v2/users/\(str)/items?page=1&per_page=100"
             return getRequest()
         }
-    }
-    
-    func setUrlLatestItem() {
-        url = "https://qiita.com/api/v2/items?page=1&per_page=100"
-    }
-    
-    func setUrlUserItem(_ userName: String) {
-        url = "https://qiita.com/api/v2/users/\(userName)/items?page=1&per_page=100"
     }
 }
