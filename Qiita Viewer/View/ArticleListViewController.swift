@@ -19,11 +19,13 @@ class ArticleListViewController: UIViewController {
     
     let viewModel = ArticleListViewModel()
     let disposeBag = DisposeBag()
+    var userName: String?
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
         searchBar.placeholder = "ユーザー名で検索"
+        searchBar.text = userName
         
         // サーチバーに入力された文字をviewModelにバインディング
         searchBar.rx.text.orEmpty
