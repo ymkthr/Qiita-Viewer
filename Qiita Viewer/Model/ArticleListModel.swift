@@ -9,9 +9,9 @@
 import Foundation
 import RxSwift
 
-class ArticleListModel {
+final class ArticleListModel {
     
-    let client = QiitaApiClient()
+    private let client = QiitaApiClient()
     
     func fetchArticles(_ str: String) -> Observable<[Article]> {
         return Observable<[Article]>.create { observer -> Disposable in
@@ -29,6 +29,7 @@ class ArticleListModel {
                         observer.onCompleted()
                     case .failure(let error):
                         print(error.localizedDescription)
+//                        observer.on(.error(error))
                 }
             }
             return Disposables.create { request.cancel() }

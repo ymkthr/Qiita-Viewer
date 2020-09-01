@@ -17,7 +17,7 @@ protocol APIClient {
     func getRequest() -> DataRequest
 }
 
-class QiitaApiClient: APIClient {
+final class QiitaApiClient: APIClient {
     
     let apiToken = "e738e431f62c3545463e3326228dc0b5a48f4522"
     let authHeader: HTTPHeaders

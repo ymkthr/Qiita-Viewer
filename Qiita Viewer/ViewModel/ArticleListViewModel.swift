@@ -9,7 +9,7 @@
 import RxSwift
 import RxCocoa
 
-class ArticleListViewModel {
+final class ArticleListViewModel {
     let searchWord         = PublishRelay<String>()
     let articleList        = PublishRelay<[Article]>()
     let isLoading          = BehaviorSubject<Bool>(value: false)

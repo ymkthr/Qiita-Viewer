@@ -12,13 +12,13 @@ import RxCocoa
 import SafariServices
 import PKHUD
 
-class ArticleListViewController: UIViewController {
-    
+final class ArticleListViewController: UIViewController {
+
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var tableView: UITableView!
     
-    let viewModel = ArticleListViewModel()
-    let disposeBag = DisposeBag()
+    private let viewModel = ArticleListViewModel()
+    private let disposeBag = DisposeBag()
     var userName: String?
 
     override func viewDidLoad() {

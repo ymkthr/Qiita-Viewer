@@ -8,8 +8,8 @@
 
 import UIKit
 
-class StartSearchViewController: UIViewController {
-    
+final class StartSearchViewController: UIViewController {
+
     @IBOutlet var searchButton: UIButton!
     @IBOutlet var textField: UITextField!
     
