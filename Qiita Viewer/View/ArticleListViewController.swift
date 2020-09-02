@@ -61,4 +61,13 @@ final class ArticleListViewController: UIViewController {
         })
             .disposed(by: disposeBag)
     }
+
+    // WebViewからの遷移時にセルの選択を解除する
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+
+        if let indexPathForSelectedRow = tableView.indexPathForSelectedRow {
+            tableView.deselectRow(at: indexPathForSelectedRow, animated: true)
+        }
+    }
 }
