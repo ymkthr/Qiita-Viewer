@@ -19,7 +19,7 @@ final class ArticleListViewModel {
     init() {
         searchWord.asObservable()
             .debounce(.milliseconds(500), scheduler: MainScheduler.instance)
-            .flatMapLatest { [unowned self] str -> Observable<[Article]> in
+            .flatMapLatest { [unowned self] str -> Single<[Article]> in
                 self.isLoading.onNext(true)
                 return self.model.fetchArticles(str)
                 /* searchWordが空文字 -> 新着記事を取得
