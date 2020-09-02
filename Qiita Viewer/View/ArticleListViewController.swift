@@ -12,26 +12,26 @@ import RxCocoa
 import SafariServices
 import PKHUD
 
-class ArticleListViewController: UIViewController {
-    
+final class ArticleListViewController: UIViewController {
+
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var tableView: UITableView!
-    
-    let viewModel = ArticleListViewModel()
-    let disposeBag = DisposeBag()
+
+    private let viewModel = ArticleListViewModel()
+    private let disposeBag = DisposeBag()
     var userName: String?
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         searchBar.placeholder = "ユーザー名で検索"
         searchBar.text = userName
-        
+
         // サーチバーに入力された文字をviewModelにバインディング
         searchBar.rx.text.orEmpty
             .bind(to: viewModel.searchWord)
             .disposed(by: disposeBag)
-        
+
         // 取得された記事をtableViewにバインディング
         viewModel.articleList.asObservable()
             .bind(to: tableView.rx.items(cellIdentifier: "CustomCell", cellType: CustomCell.self)) { row, article, cell in
@@ -43,22 +43,31 @@ class ArticleListViewController: UIViewController {
                 cell.iconImageView.image = UIImage(url: article.user.profile_image_url)
             }
             .disposed(by: disposeBag)
-        
+
         // タップした記事をWebViewで開く
         tableView.rx.modelSelected(Article.self)
             .subscribe(onNext: { [unowned self] article in
                 let url = URL(string: article.url)
-                if let url = url{
+                if let url = url {
                     let safariViewController = SFSafariViewController(url: url)
                     self.present(safariViewController, animated: true, completion: nil)
                 }
             })
             .disposed(by: disposeBag)
-        
+
         // インジケーター
         viewModel.isLoading.subscribe(onNext: { bool in
             bool ? HUD.show(.progress) : HUD.hide()
-            })
+        })
             .disposed(by: disposeBag)
+    }
+
+    // WebViewからの遷移時にセルの選択を解除する
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+
+        if let indexPathForSelectedRow = tableView.indexPathForSelectedRow {
+            tableView.deselectRow(at: indexPathForSelectedRow, animated: true)
+        }
     }
 }

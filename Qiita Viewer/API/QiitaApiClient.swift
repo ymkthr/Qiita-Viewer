@@ -12,23 +12,22 @@ protocol APIClient {
     var apiToken: String { get }
     var authHeader: HTTPHeaders { get }
     var url: String? { get }
-    
-    
+
     func getRequest() -> DataRequest
 }
 
-class QiitaApiClient: APIClient {
-    
+final class QiitaApiClient: APIClient {
+
     let apiToken = "e738e431f62c3545463e3326228dc0b5a48f4522"
     let authHeader: HTTPHeaders
     var url: String?
-    
+
     init() {
         authHeader = [
-            "Authorization" : "Bearer " + apiToken
+            "Authorization": "Bearer " + apiToken
         ]
     }
-    
+
     func getRequest() -> DataRequest {
         return AF.request(
             url!,
@@ -36,7 +35,7 @@ class QiitaApiClient: APIClient {
             headers: authHeader
         )
     }
-    
+
     func requestHandler(_ str: String) -> DataRequest {
         if str.isEmpty {
             url = "https://qiita.com/api/v2/items?page=1&per_page=100"

@@ -9,26 +9,27 @@
 import Foundation
 import RxSwift
 
-class ArticleListModel {
-    
-    let client = QiitaApiClient()
-    
+final class ArticleListModel {
+
+    private let client = QiitaApiClient()
+
     func fetchArticles(_ str: String) -> Observable<[Article]> {
         return Observable<[Article]>.create { observer -> Disposable in
             let request = self.client.requestHandler(str).responseJSON { response in
                 switch response.result {
-                    case .success:
-                        let decoder: JSONDecoder = JSONDecoder()
-                        var articles: [Article] = []
-                        do {
-                            articles = try decoder.decode([Article].self, from: response.data!)
-                        } catch {
-                            print(error.localizedDescription)
-                        }
-                        observer.onNext(articles)
-                        observer.onCompleted()
-                    case .failure(let error):
+                case .success:
+                    let decoder: JSONDecoder = JSONDecoder()
+                    var articles: [Article] = []
+                    do {
+                        articles = try decoder.decode([Article].self, from: response.data!)
+                    } catch {
                         print(error.localizedDescription)
+                    }
+                    observer.onNext(articles)
+                    observer.onCompleted()
+                case .failure(let error):
+                    print(error.localizedDescription)
+                    // observer.on(.error(error))
                 }
             }
             return Disposables.create { request.cancel() }

@@ -7,18 +7,18 @@
 //
 
 extension Article {
-    var date: String  {
-           get {
-               let date = self.created_at.prefix(10)
-               return String(date)
-           }
-       }
-    
+    var date: String {
+        get {
+            let date = self.created_at.prefix(10)
+            return String(date)
+        }
+    }
+
     var lgtm: String {
         get {
             let str = likes_count.description
             return str
         }
     }
-    
+
 }

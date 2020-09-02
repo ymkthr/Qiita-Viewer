@@ -290,7 +290,7 @@
 				84FC013524F0E002001763D4 /* Sources */,
 				84FC013624F0E002001763D4 /* Frameworks */,
 				84FC013724F0E002001763D4 /* Resources */,
-				84FC017324F0EA6B001763D4 /* ShellScript */,
+				84FC017324F0EA6B001763D4 /* Carthage */,
 			);
 			buildRules = (
 			);
@@ -481,21 +481,19 @@
 			shellPath = /bin/sh;
 			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
 		};
-		84FC017324F0EA6B001763D4 /* ShellScript */ = {
+		84FC017324F0EA6B001763D4 /* Carthage */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputFileListPaths = (
+				"$(SRCROOT)/CarthageInputFileList.xcfilelist",
 			);
 			inputPaths = (
-				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/RxSwift.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/RxCocoa.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/RxRelay.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/PKHUD.framework",
 			);
+			name = Carthage;
 			outputFileListPaths = (
+				"$(SRCROOT)/CarthageOutputFileList.xcfilelist",
 			);
 			outputPaths = (
 			);
