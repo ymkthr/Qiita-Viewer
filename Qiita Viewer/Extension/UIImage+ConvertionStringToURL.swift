@@ -6,7 +6,6 @@
 //  Copyright © 2020 Katsuhiro Yamauchi. All rights reserved.
 //
 
-import Foundation
 import UIKit
 
 extension UIImage {

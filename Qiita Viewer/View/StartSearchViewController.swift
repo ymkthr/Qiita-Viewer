@@ -12,17 +12,16 @@ final class StartSearchViewController: UIViewController {
 
     @IBOutlet var searchButton: UIButton!
     @IBOutlet var textField: UITextField!
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         textField.placeholder = "ユーザー名を入力"
-        
+
         searchButton.layer.cornerRadius = 5
         searchButton.layer.borderColor = UIColor.gray.cgColor
         searchButton.layer.borderWidth = 1
     }
-    
 
     @IBAction func didTapButton(_ sender: UIButton) {
         let storyboard = self.storyboard!
