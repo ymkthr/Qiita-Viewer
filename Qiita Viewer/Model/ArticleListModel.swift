@@ -24,6 +24,7 @@ final class ArticleListModel {
                         articles = try decoder.decode([Article].self, from: response.data!)
                     } catch {
                         print(error.localizedDescription)
+                        single(.error(error))
                     }
                     single(.success(articles))
                 case .failure(let error):

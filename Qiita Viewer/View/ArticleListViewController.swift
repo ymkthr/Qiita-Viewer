@@ -56,8 +56,15 @@ final class ArticleListViewController: UIViewController {
             .disposed(by: disposeBag)
 
         // インジケーター
-        viewModel.isLoading.subscribe(onNext: { bool in
-            bool ? HUD.show(.progress) : HUD.hide()
+        viewModel.isLoading.subscribe(onNext: { loadingStatus in
+            switch loadingStatus {
+            case .success:
+                HUD.hide()
+            case .failure:
+                HUD.flash(.error, delay: 2)
+            case .loading:
+                HUD.show(.progress)
+            }
         })
             .disposed(by: disposeBag)
     }
