@@ -13,8 +13,8 @@ final class ArticleListModel {
 
     private let client = QiitaApiClient()
 
-    func fetchArticles(_ str: String) -> Observable<[Article]> {
-        return Observable<[Article]>.create { observer -> Disposable in
+    func fetchArticles(_ str: String) -> Single<[Article]> {
+        return Single<[Article]>.create { single -> Disposable in
             let request = self.client.requestHandler(str).responseJSON { response in
                 switch response.result {
                 case .success:
@@ -24,12 +24,12 @@ final class ArticleListModel {
                         articles = try decoder.decode([Article].self, from: response.data!)
                     } catch {
                         print(error.localizedDescription)
+                        single(.error(error))
                     }
-                    observer.onNext(articles)
-                    observer.onCompleted()
+                    single(.success(articles))
                 case .failure(let error):
                     print(error.localizedDescription)
-                    // observer.on(.error(error))
+                    single(.error(error))
                 }
             }
             return Disposables.create { request.cancel() }
