@@ -11,6 +11,7 @@ import RxSwift
 import RxCocoa
 import SafariServices
 import PKHUD
+import AlamofireImage
 
 final class ArticleListViewController: UIViewController {
 
@@ -35,12 +36,14 @@ final class ArticleListViewController: UIViewController {
         // 取得された記事をtableViewにバインディング
         viewModel.articleList.asObservable()
             .bind(to: tableView.rx.items(cellIdentifier: "CustomCell", cellType: CustomCell.self)) { row, article, cell in
+                let iconImageUrl = URL(string: article.user.profile_image_url)
+                
                 cell.titleLabel.text = article.title
                 cell.urlLabel.text = article.url
                 cell.userNameLabel.text = "@" + article.user.id
                 cell.likeCountLabel.text = "LGTM: " + article.lgtm
                 cell.dateCreatedLabel.text = "投稿日: " + article.date
-                cell.iconImageView.image = UIImage(url: article.user.profile_image_url)
+                cell.iconImageView.af.setImage(withURL: iconImageUrl!)
             }
             .disposed(by: disposeBag)
 

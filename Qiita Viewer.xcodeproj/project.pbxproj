@@ -12,7 +12,6 @@
 		84189C892500C7F8003F1FE7 /* LoadingStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84189C882500C7F8003F1FE7 /* LoadingStatus.swift */; };
 		842AAE4324F3E692003173D6 /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842AAE4224F3E692003173D6 /* CustomCell.swift */; };
 		842AAE4724F410F1003173D6 /* Article+ComputedProperty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842AAE4624F410F1003173D6 /* Article+ComputedProperty.swift */; };
-		844899D424F4CFB100994B57 /* UIImage+ConvertionStringToURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844899D324F4CFB100994B57 /* UIImage+ConvertionStringToURL.swift */; };
 		844899D924F61B4E00994B57 /* PKHUD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 844899D824F61B4E00994B57 /* PKHUD.framework */; };
 		84D849FE24F812BF00B6D855 /* StartSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D849FD24F812BF00B6D855 /* StartSearchViewController.swift */; };
 		84E3278924F92F530083B08B /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84FC016F24F0EA61001763D4 /* Alamofire.framework */; };
@@ -72,7 +71,6 @@
 		84189C882500C7F8003F1FE7 /* LoadingStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingStatus.swift; sourceTree = "<group>"; };
 		842AAE4224F3E692003173D6 /* CustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
 		842AAE4624F410F1003173D6 /* Article+ComputedProperty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Article+ComputedProperty.swift"; sourceTree = "<group>"; };
-		844899D324F4CFB100994B57 /* UIImage+ConvertionStringToURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+ConvertionStringToURL.swift"; sourceTree = "<group>"; };
 		844899D824F61B4E00994B57 /* PKHUD.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PKHUD.framework; path = Carthage/Build/iOS/PKHUD.framework; sourceTree = "<group>"; };
 		84D849FD24F812BF00B6D855 /* StartSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartSearchViewController.swift; sourceTree = "<group>"; };
 		84E3278F24F92F530083B08B /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
@@ -173,7 +171,6 @@
 		844899D224F4CE9C00994B57 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
-				844899D324F4CFB100994B57 /* UIImage+ConvertionStringToURL.swift */,
 				842AAE4624F410F1003173D6 /* Article+ComputedProperty.swift */,
 			);
 			path = Extension;
@@ -563,7 +560,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				84FC019524F0F7BF001763D4 /* ArticleListModel.swift in Sources */,
-				844899D424F4CFB100994B57 /* UIImage+ConvertionStringToURL.swift in Sources */,
 				84FC019C24F110C5001763D4 /* ArticleListViewModel.swift in Sources */,
 				84189C892500C7F8003F1FE7 /* LoadingStatus.swift in Sources */,
 				84FC019224F0F553001763D4 /* QiitaApiClient.swift in Sources */,
