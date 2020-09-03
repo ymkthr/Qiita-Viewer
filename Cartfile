@@ -3,3 +3,4 @@ github "ReactiveX/RxSwift" ~> 5.0
 github "pkluz/PKHUD" ~> 5.2.2
 github "Quick/Quick"
 github "Quick/Nimble"
+github "Alamofire/AlamofireImage" ~> 4.1
