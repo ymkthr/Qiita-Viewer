@@ -23,6 +23,9 @@
 		84E3279124F92F530083B08B /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84E3278F24F92F530083B08B /* Nimble.framework */; };
 		84E3279224F92F530083B08B /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84E3279024F92F530083B08B /* Quick.framework */; };
 		84F1EFBE25013CF300877117 /* AlamofireImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84F1EFBD25013CF300877117 /* AlamofireImage.framework */; };
+		84F1EFC22502124A00877117 /* UIViewController+hideKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F1EFC12502124A00877117 /* UIViewController+hideKeyboard.swift */; };
+		84F1EFC425024C7C00877117 /* StartSearchViewController+TextFieldInputValidation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F1EFC325024C7C00877117 /* StartSearchViewController+TextFieldInputValidation.swift */; };
+		84F1EFC62502557C00877117 /* ArticleListViewController+UISearchBarInputValidation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F1EFC52502557C00877117 /* ArticleListViewController+UISearchBarInputValidation.swift */; };
 		84FC013D24F0E002001763D4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FC013C24F0E002001763D4 /* AppDelegate.swift */; };
 		84FC013F24F0E002001763D4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FC013E24F0E002001763D4 /* SceneDelegate.swift */; };
 		84FC014624F0E003001763D4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84FC014524F0E003001763D4 /* Assets.xcassets */; };
@@ -76,6 +79,9 @@
 		84E3278F24F92F530083B08B /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
 		84E3279024F92F530083B08B /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
 		84F1EFBD25013CF300877117 /* AlamofireImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AlamofireImage.framework; path = Carthage/Build/iOS/AlamofireImage.framework; sourceTree = "<group>"; };
+		84F1EFC12502124A00877117 /* UIViewController+hideKeyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+hideKeyboard.swift"; sourceTree = "<group>"; };
+		84F1EFC325024C7C00877117 /* StartSearchViewController+TextFieldInputValidation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StartSearchViewController+TextFieldInputValidation.swift"; sourceTree = "<group>"; };
+		84F1EFC52502557C00877117 /* ArticleListViewController+UISearchBarInputValidation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ArticleListViewController+UISearchBarInputValidation.swift"; sourceTree = "<group>"; };
 		84FC013924F0E002001763D4 /* Qiita Viewer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Qiita Viewer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		84FC013C24F0E002001763D4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		84FC013E24F0E002001763D4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -172,6 +178,9 @@
 			isa = PBXGroup;
 			children = (
 				842AAE4624F410F1003173D6 /* Article+ComputedProperty.swift */,
+				84F1EFC12502124A00877117 /* UIViewController+hideKeyboard.swift */,
+				84F1EFC52502557C00877117 /* ArticleListViewController+UISearchBarInputValidation.swift */,
+				84F1EFC325024C7C00877117 /* StartSearchViewController+TextFieldInputValidation.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -564,6 +573,9 @@
 				84189C892500C7F8003F1FE7 /* LoadingStatus.swift in Sources */,
 				84FC019224F0F553001763D4 /* QiitaApiClient.swift in Sources */,
 				842AAE4324F3E692003173D6 /* CustomCell.swift in Sources */,
+				84F1EFC425024C7C00877117 /* StartSearchViewController+TextFieldInputValidation.swift in Sources */,
+				84F1EFC22502124A00877117 /* UIViewController+hideKeyboard.swift in Sources */,
+				84F1EFC62502557C00877117 /* ArticleListViewController+UISearchBarInputValidation.swift in Sources */,
 				84FC019724F0F7F6001763D4 /* Article.swift in Sources */,
 				84FC013D24F0E002001763D4 /* AppDelegate.swift in Sources */,
 				84FC01A224F1759E001763D4 /* ArticleListViewController.swift in Sources */,

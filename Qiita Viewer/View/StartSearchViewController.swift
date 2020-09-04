@@ -17,10 +17,13 @@ final class StartSearchViewController: UIViewController {
         super.viewDidLoad()
 
         textField.placeholder = "ユーザー名を入力"
+        textField.delegate = self
 
         searchButton.layer.cornerRadius = 5
         searchButton.layer.borderColor = UIColor.gray.cgColor
         searchButton.layer.borderWidth = 1
+        
+        hideKeyboardWhenTappedAround() // キーボード外タップでキーボードを隠す
     }
 
     @IBAction func didTapButton(_ sender: UIButton) {
