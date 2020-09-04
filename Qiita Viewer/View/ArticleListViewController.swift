@@ -27,6 +27,7 @@ final class ArticleListViewController: UIViewController {
 
         searchBar.placeholder = "ユーザー名で検索"
         searchBar.text = userName
+        searchBar.delegate = self
 
         // サーチバーに入力された文字をviewModelにバインディング
         searchBar.rx.text.orEmpty
