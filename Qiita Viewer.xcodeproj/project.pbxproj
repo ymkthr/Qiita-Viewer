@@ -3,16 +3,23 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3D3DDDA75F54822E700900C3 /* Pods_Qiita_Viewer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F34E34D4982057A39FDEAEE /* Pods_Qiita_Viewer.framework */; };
-		70561ADE6AE0252BF3562251 /* Pods_Qiita_ViewerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05AF158DADFC0C86A16BDCF0 /* Pods_Qiita_ViewerTests.framework */; };
 		84189C892500C7F8003F1FE7 /* LoadingStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84189C882500C7F8003F1FE7 /* LoadingStatus.swift */; };
 		842AAE4324F3E692003173D6 /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842AAE4224F3E692003173D6 /* CustomCell.swift */; };
 		842AAE4724F410F1003173D6 /* Article+ComputedProperty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842AAE4624F410F1003173D6 /* Article+ComputedProperty.swift */; };
-		844899D924F61B4E00994B57 /* PKHUD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 844899D824F61B4E00994B57 /* PKHUD.framework */; };
+		8499927C25E535B500AE5B76 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 8499927B25E535B500AE5B76 /* Alamofire */; };
+		8499928525E535F700AE5B76 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 8499928425E535F700AE5B76 /* RxSwift */; };
+		8499928725E535F700AE5B76 /* RxTest in Frameworks */ = {isa = PBXBuildFile; productRef = 8499928625E535F700AE5B76 /* RxTest */; };
+		8499928925E535F700AE5B76 /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = 8499928825E535F700AE5B76 /* RxRelay */; };
+		8499928B25E535F700AE5B76 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 8499928A25E535F700AE5B76 /* RxCocoa */; };
+		8499928D25E535F700AE5B76 /* RxBlocking in Frameworks */ = {isa = PBXBuildFile; productRef = 8499928C25E535F700AE5B76 /* RxBlocking */; };
+		8499929325E5363100AE5B76 /* AlamofireImage in Frameworks */ = {isa = PBXBuildFile; productRef = 8499929225E5363100AE5B76 /* AlamofireImage */; };
+		8499929925E5366900AE5B76 /* PKHUD in Frameworks */ = {isa = PBXBuildFile; productRef = 8499929825E5366900AE5B76 /* PKHUD */; };
+		8499929F25E536AD00AE5B76 /* Quick in Frameworks */ = {isa = PBXBuildFile; productRef = 8499929E25E536AD00AE5B76 /* Quick */; };
+		849992A525E536DE00AE5B76 /* Nimble in Frameworks */ = {isa = PBXBuildFile; productRef = 849992A425E536DE00AE5B76 /* Nimble */; };
 		84D849FE24F812BF00B6D855 /* StartSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D849FD24F812BF00B6D855 /* StartSearchViewController.swift */; };
 		84E3278924F92F530083B08B /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84FC016F24F0EA61001763D4 /* Alamofire.framework */; };
 		84E3278A24F92F530083B08B /* RxBlocking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84FC017F24F0F24B001763D4 /* RxBlocking.framework */; };
@@ -22,7 +29,6 @@
 		84E3278E24F92F530083B08B /* RxTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84FC018124F0F24B001763D4 /* RxTest.framework */; };
 		84E3279124F92F530083B08B /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84E3278F24F92F530083B08B /* Nimble.framework */; };
 		84E3279224F92F530083B08B /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84E3279024F92F530083B08B /* Quick.framework */; };
-		84F1EFBE25013CF300877117 /* AlamofireImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84F1EFBD25013CF300877117 /* AlamofireImage.framework */; };
 		84F1EFC22502124A00877117 /* UIViewController+hideKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F1EFC12502124A00877117 /* UIViewController+hideKeyboard.swift */; };
 		84F1EFC425024C7C00877117 /* StartSearchViewController+TextFieldInputValidation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F1EFC325024C7C00877117 /* StartSearchViewController+TextFieldInputValidation.swift */; };
 		84F1EFC62502557C00877117 /* ArticleListViewController+UISearchBarInputValidation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F1EFC52502557C00877117 /* ArticleListViewController+UISearchBarInputValidation.swift */; };
@@ -32,18 +38,13 @@
 		84FC014924F0E003001763D4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84FC014724F0E003001763D4 /* LaunchScreen.storyboard */; };
 		84FC015424F0E003001763D4 /* Qiita_ViewerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FC015324F0E003001763D4 /* Qiita_ViewerTests.swift */; };
 		84FC015F24F0E003001763D4 /* Qiita_ViewerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FC015E24F0E003001763D4 /* Qiita_ViewerUITests.swift */; };
-		84FC017024F0EA61001763D4 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84FC016F24F0EA61001763D4 /* Alamofire.framework */; };
-		84FC018224F0F24B001763D4 /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84FC017D24F0F24B001763D4 /* RxCocoa.framework */; };
-		84FC018824F0F24C001763D4 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84FC018024F0F24B001763D4 /* RxSwift.framework */; };
 		84FC019224F0F553001763D4 /* QiitaApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FC019124F0F553001763D4 /* QiitaApiClient.swift */; };
 		84FC019524F0F7BF001763D4 /* ArticleListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FC019424F0F7BF001763D4 /* ArticleListModel.swift */; };
 		84FC019724F0F7F6001763D4 /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FC019624F0F7F6001763D4 /* Article.swift */; };
 		84FC019924F0F82F001763D4 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FC019824F0F82F001763D4 /* User.swift */; };
 		84FC019C24F110C5001763D4 /* ArticleListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FC019B24F110C5001763D4 /* ArticleListViewModel.swift */; };
-		84FC019D24F11350001763D4 /* RxRelay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84FC017E24F0F24B001763D4 /* RxRelay.framework */; };
 		84FC01A224F1759E001763D4 /* ArticleListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FC01A124F1759E001763D4 /* ArticleListViewController.swift */; };
 		84FC01A424F1765C001763D4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84FC01A324F1765C001763D4 /* Main.storyboard */; };
-		C5CCBF85A330EFE94A3255D2 /* Pods_Qiita_Viewer_Qiita_ViewerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C398D06259487CB686545AE1 /* Pods_Qiita_Viewer_Qiita_ViewerUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,13 +65,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		05AF158DADFC0C86A16BDCF0 /* Pods_Qiita_ViewerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Qiita_ViewerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		176FBAA351349DCCB823F5EC /* Pods-Qiita ViewerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Qiita ViewerTests.release.xcconfig"; path = "Target Support Files/Pods-Qiita ViewerTests/Pods-Qiita ViewerTests.release.xcconfig"; sourceTree = "<group>"; };
-		2234F121B625F161ACF9B421 /* Pods-Qiita Viewer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Qiita Viewer.debug.xcconfig"; path = "Target Support Files/Pods-Qiita Viewer/Pods-Qiita Viewer.debug.xcconfig"; sourceTree = "<group>"; };
-		2C17DD24D6A7862C5CBB6134 /* Pods-Qiita ViewerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Qiita ViewerTests.debug.xcconfig"; path = "Target Support Files/Pods-Qiita ViewerTests/Pods-Qiita ViewerTests.debug.xcconfig"; sourceTree = "<group>"; };
-		5A5DABD4BBCF952277A1FB2D /* Pods-Qiita Viewer-Qiita ViewerUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Qiita Viewer-Qiita ViewerUITests.release.xcconfig"; path = "Target Support Files/Pods-Qiita Viewer-Qiita ViewerUITests/Pods-Qiita Viewer-Qiita ViewerUITests.release.xcconfig"; sourceTree = "<group>"; };
-		6F34E34D4982057A39FDEAEE /* Pods_Qiita_Viewer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Qiita_Viewer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		7635C991EA34135CD8E53995 /* Pods-Qiita Viewer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Qiita Viewer.release.xcconfig"; path = "Target Support Files/Pods-Qiita Viewer/Pods-Qiita Viewer.release.xcconfig"; sourceTree = "<group>"; };
 		84189C882500C7F8003F1FE7 /* LoadingStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingStatus.swift; sourceTree = "<group>"; };
 		842AAE4224F3E692003173D6 /* CustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
 		842AAE4624F410F1003173D6 /* Article+ComputedProperty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Article+ComputedProperty.swift"; sourceTree = "<group>"; };
@@ -107,8 +101,6 @@
 		84FC019B24F110C5001763D4 /* ArticleListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleListViewModel.swift; sourceTree = "<group>"; };
 		84FC01A124F1759E001763D4 /* ArticleListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleListViewController.swift; sourceTree = "<group>"; };
 		84FC01A324F1765C001763D4 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
-		C398D06259487CB686545AE1 /* Pods_Qiita_Viewer_Qiita_ViewerUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Qiita_Viewer_Qiita_ViewerUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		F7A0C1A3A57BBE11F8BFE5E7 /* Pods-Qiita Viewer-Qiita ViewerUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Qiita Viewer-Qiita ViewerUITests.debug.xcconfig"; path = "Target Support Files/Pods-Qiita Viewer-Qiita ViewerUITests/Pods-Qiita Viewer-Qiita ViewerUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,13 +108,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				84FC018824F0F24C001763D4 /* RxSwift.framework in Frameworks */,
-				84FC018224F0F24B001763D4 /* RxCocoa.framework in Frameworks */,
-				84F1EFBE25013CF300877117 /* AlamofireImage.framework in Frameworks */,
-				84FC017024F0EA61001763D4 /* Alamofire.framework in Frameworks */,
-				844899D924F61B4E00994B57 /* PKHUD.framework in Frameworks */,
-				84FC019D24F11350001763D4 /* RxRelay.framework in Frameworks */,
-				3D3DDDA75F54822E700900C3 /* Pods_Qiita_Viewer.framework in Frameworks */,
+				8499928925E535F700AE5B76 /* RxRelay in Frameworks */,
+				8499928525E535F700AE5B76 /* RxSwift in Frameworks */,
+				8499929325E5363100AE5B76 /* AlamofireImage in Frameworks */,
+				8499929925E5366900AE5B76 /* PKHUD in Frameworks */,
+				8499928B25E535F700AE5B76 /* RxCocoa in Frameworks */,
+				8499927C25E535B500AE5B76 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -130,15 +121,18 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				70561ADE6AE0252BF3562251 /* Pods_Qiita_ViewerTests.framework in Frameworks */,
+				8499929F25E536AD00AE5B76 /* Quick in Frameworks */,
 				84E3279124F92F530083B08B /* Nimble.framework in Frameworks */,
+				8499928725E535F700AE5B76 /* RxTest in Frameworks */,
 				84E3279224F92F530083B08B /* Quick.framework in Frameworks */,
 				84E3278924F92F530083B08B /* Alamofire.framework in Frameworks */,
 				84E3278A24F92F530083B08B /* RxBlocking.framework in Frameworks */,
 				84E3278B24F92F530083B08B /* RxCocoa.framework in Frameworks */,
 				84E3278C24F92F530083B08B /* RxRelay.framework in Frameworks */,
 				84E3278D24F92F530083B08B /* RxSwift.framework in Frameworks */,
+				849992A525E536DE00AE5B76 /* Nimble in Frameworks */,
 				84E3278E24F92F530083B08B /* RxTest.framework in Frameworks */,
+				8499928D25E535F700AE5B76 /* RxBlocking in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -146,26 +140,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C5CCBF85A330EFE94A3255D2 /* Pods_Qiita_Viewer_Qiita_ViewerUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		72ED2ADC1EFB0F2AAF135825 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				2234F121B625F161ACF9B421 /* Pods-Qiita Viewer.debug.xcconfig */,
-				7635C991EA34135CD8E53995 /* Pods-Qiita Viewer.release.xcconfig */,
-				F7A0C1A3A57BBE11F8BFE5E7 /* Pods-Qiita Viewer-Qiita ViewerUITests.debug.xcconfig */,
-				5A5DABD4BBCF952277A1FB2D /* Pods-Qiita Viewer-Qiita ViewerUITests.release.xcconfig */,
-				2C17DD24D6A7862C5CBB6134 /* Pods-Qiita ViewerTests.debug.xcconfig */,
-				176FBAA351349DCCB823F5EC /* Pods-Qiita ViewerTests.release.xcconfig */,
-			);
-			path = Pods;
-			sourceTree = "<group>";
-		};
 		84189C872500C7AB003F1FE7 /* Helper */ = {
 			isa = PBXGroup;
 			children = (
@@ -193,7 +173,6 @@
 				84FC015D24F0E003001763D4 /* Qiita ViewerUITests */,
 				84FC013A24F0E002001763D4 /* Products */,
 				84FC016E24F0EA61001763D4 /* Frameworks */,
-				72ED2ADC1EFB0F2AAF135825 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -256,9 +235,6 @@
 				84FC018024F0F24B001763D4 /* RxSwift.framework */,
 				84FC018124F0F24B001763D4 /* RxTest.framework */,
 				84FC016F24F0EA61001763D4 /* Alamofire.framework */,
-				6F34E34D4982057A39FDEAEE /* Pods_Qiita_Viewer.framework */,
-				C398D06259487CB686545AE1 /* Pods_Qiita_Viewer_Qiita_ViewerUITests.framework */,
-				05AF158DADFC0C86A16BDCF0 /* Pods_Qiita_ViewerTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -307,17 +283,23 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 84FC016324F0E003001763D4 /* Build configuration list for PBXNativeTarget "Qiita Viewer" */;
 			buildPhases = (
-				79B9EECBF5D6351CA421E6FE /* [CP] Check Pods Manifest.lock */,
 				84FC013524F0E002001763D4 /* Sources */,
 				84FC013624F0E002001763D4 /* Frameworks */,
 				84FC013724F0E002001763D4 /* Resources */,
-				84FC017324F0EA6B001763D4 /* Carthage */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = "Qiita Viewer";
+			packageProductDependencies = (
+				8499927B25E535B500AE5B76 /* Alamofire */,
+				8499928425E535F700AE5B76 /* RxSwift */,
+				8499928825E535F700AE5B76 /* RxRelay */,
+				8499928A25E535F700AE5B76 /* RxCocoa */,
+				8499929225E5363100AE5B76 /* AlamofireImage */,
+				8499929825E5366900AE5B76 /* PKHUD */,
+			);
 			productName = "Qiita Viewer";
 			productReference = 84FC013924F0E002001763D4 /* Qiita Viewer.app */;
 			productType = "com.apple.product-type.application";
@@ -326,12 +308,10 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 84FC016624F0E003001763D4 /* Build configuration list for PBXNativeTarget "Qiita ViewerTests" */;
 			buildPhases = (
-				4C8ACC6072234D0818BFEC8A /* [CP] Check Pods Manifest.lock */,
 				84FC014B24F0E003001763D4 /* Sources */,
 				84FC014C24F0E003001763D4 /* Frameworks */,
 				84FC014D24F0E003001763D4 /* Resources */,
 				84E3279324F92F5D0083B08B /* ShellScript */,
-				94D69422E0AE0D60455F1664 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -339,6 +319,12 @@
 				84FC015124F0E003001763D4 /* PBXTargetDependency */,
 			);
 			name = "Qiita ViewerTests";
+			packageProductDependencies = (
+				8499928625E535F700AE5B76 /* RxTest */,
+				8499928C25E535F700AE5B76 /* RxBlocking */,
+				8499929E25E536AD00AE5B76 /* Quick */,
+				849992A425E536DE00AE5B76 /* Nimble */,
+			);
 			productName = "Qiita ViewerTests";
 			productReference = 84FC014F24F0E003001763D4 /* Qiita ViewerTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -347,7 +333,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 84FC016924F0E003001763D4 /* Build configuration list for PBXNativeTarget "Qiita ViewerUITests" */;
 			buildPhases = (
-				BA62F421CE1493E5F33DC2CD /* [CP] Check Pods Manifest.lock */,
 				84FC015624F0E003001763D4 /* Sources */,
 				84FC015724F0E003001763D4 /* Frameworks */,
 				84FC015824F0E003001763D4 /* Resources */,
@@ -369,7 +354,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1160;
-				LastUpgradeCheck = 1160;
+				LastUpgradeCheck = 1240;
 				ORGANIZATIONNAME = "Katsuhiro Yamauchi";
 				TargetAttributes = {
 					84FC013824F0E002001763D4 = {
@@ -394,6 +379,14 @@
 				Base,
 			);
 			mainGroup = 84FC013024F0E002001763D4;
+			packageReferences = (
+				8499927A25E535B500AE5B76 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				8499928325E535F700AE5B76 /* XCRemoteSwiftPackageReference "RxSwift" */,
+				8499929125E5363100AE5B76 /* XCRemoteSwiftPackageReference "AlamofireImage" */,
+				8499929725E5366900AE5B76 /* XCRemoteSwiftPackageReference "PKHUD" */,
+				8499929D25E536AD00AE5B76 /* XCRemoteSwiftPackageReference "Quick" */,
+				849992A325E536DE00AE5B76 /* XCRemoteSwiftPackageReference "Nimble" */,
+			);
 			productRefGroup = 84FC013A24F0E002001763D4 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -433,50 +426,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		4C8ACC6072234D0818BFEC8A /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Qiita ViewerTests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		79B9EECBF5D6351CA421E6FE /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Qiita Viewer-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
 		84E3279324F92F5D0083B08B /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -501,65 +450,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
-		};
-		84FC017324F0EA6B001763D4 /* Carthage */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"$(SRCROOT)/CarthageInputFileList.xcfilelist",
-			);
-			inputPaths = (
-			);
-			name = Carthage;
-			outputFileListPaths = (
-				"$(SRCROOT)/CarthageOutputFileList.xcfilelist",
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
-		};
-		94D69422E0AE0D60455F1664 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Qiita ViewerTests/Pods-Qiita ViewerTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Qiita ViewerTests/Pods-Qiita ViewerTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Qiita ViewerTests/Pods-Qiita ViewerTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		BA62F421CE1493E5F33DC2CD /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Qiita Viewer-Qiita ViewerUITests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -655,6 +545,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -715,6 +606,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -745,7 +637,6 @@
 		};
 		84FC016424F0E003001763D4 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2234F121B625F161ACF9B421 /* Pods-Qiita Viewer.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -769,7 +660,6 @@
 		};
 		84FC016524F0E003001763D4 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7635C991EA34135CD8E53995 /* Pods-Qiita Viewer.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -792,7 +682,6 @@
 		};
 		84FC016724F0E003001763D4 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2C17DD24D6A7862C5CBB6134 /* Pods-Qiita ViewerTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -819,7 +708,6 @@
 		};
 		84FC016824F0E003001763D4 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 176FBAA351349DCCB823F5EC /* Pods-Qiita ViewerTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -846,7 +734,6 @@
 		};
 		84FC016A24F0E003001763D4 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F7A0C1A3A57BBE11F8BFE5E7 /* Pods-Qiita Viewer-Qiita ViewerUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -867,7 +754,6 @@
 		};
 		84FC016B24F0E003001763D4 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5A5DABD4BBCF952277A1FB2D /* Pods-Qiita Viewer-Qiita ViewerUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -926,6 +812,110 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		8499927A25E535B500AE5B76 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.4.1;
+			};
+		};
+		8499928325E535F700AE5B76 /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactiveX/RxSwift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.1.0;
+			};
+		};
+		8499929125E5363100AE5B76 /* XCRemoteSwiftPackageReference "AlamofireImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/AlamofireImage";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.1.0;
+			};
+		};
+		8499929725E5366900AE5B76 /* XCRemoteSwiftPackageReference "PKHUD" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pkluz/PKHUD";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.4.0;
+			};
+		};
+		8499929D25E536AD00AE5B76 /* XCRemoteSwiftPackageReference "Quick" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Quick/Quick";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.1.2;
+			};
+		};
+		849992A325E536DE00AE5B76 /* XCRemoteSwiftPackageReference "Nimble" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Quick/Nimble";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 9.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		8499927B25E535B500AE5B76 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8499927A25E535B500AE5B76 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		8499928425E535F700AE5B76 /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8499928325E535F700AE5B76 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
+		};
+		8499928625E535F700AE5B76 /* RxTest */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8499928325E535F700AE5B76 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxTest;
+		};
+		8499928825E535F700AE5B76 /* RxRelay */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8499928325E535F700AE5B76 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxRelay;
+		};
+		8499928A25E535F700AE5B76 /* RxCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8499928325E535F700AE5B76 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxCocoa;
+		};
+		8499928C25E535F700AE5B76 /* RxBlocking */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8499928325E535F700AE5B76 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxBlocking;
+		};
+		8499929225E5363100AE5B76 /* AlamofireImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8499929125E5363100AE5B76 /* XCRemoteSwiftPackageReference "AlamofireImage" */;
+			productName = AlamofireImage;
+		};
+		8499929825E5366900AE5B76 /* PKHUD */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8499929725E5366900AE5B76 /* XCRemoteSwiftPackageReference "PKHUD" */;
+			productName = PKHUD;
+		};
+		8499929E25E536AD00AE5B76 /* Quick */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8499929D25E536AD00AE5B76 /* XCRemoteSwiftPackageReference "Quick" */;
+			productName = Quick;
+		};
+		849992A425E536DE00AE5B76 /* Nimble */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 849992A325E536DE00AE5B76 /* XCRemoteSwiftPackageReference "Nimble" */;
+			productName = Nimble;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 84FC013124F0E002001763D4 /* Project object */;
 }
