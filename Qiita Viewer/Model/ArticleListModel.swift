@@ -24,12 +24,12 @@ final class ArticleListModel {
                         articles = try decoder.decode([Article].self, from: response.data!)
                     } catch {
                         print(error.localizedDescription)
-                        single(.error(error))
+                        single(.failure(error))
                     }
                     single(.success(articles))
                 case .failure(let error):
                     print(error.localizedDescription)
-                    single(.error(error))
+                    single(.failure(error))
                 }
             }
             return Disposables.create { request.cancel() }
