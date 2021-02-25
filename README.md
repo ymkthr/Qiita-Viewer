@@ -15,11 +15,3 @@ open "Qiita Viewer.xcworkspace"
 
 # Demo
 ![Demo](resources/file-0.gif)
-
-# Library
-- Package Manager
-  - Carthage
-  - Cocoapods
-- RxSwift (MVVM構築)
-- Alamofire (Qiita投稿取得)
-- PKHUD (API通信中インジケーター表示)
