@@ -5,8 +5,6 @@ Qiitaのビューワーアプリです。
 
 ```
 git clone https://github.com/ymkthr/Qiita-Viewer.git
-cd Qiita-Viewer
-open "Qiita Viewer.xcworkspace"
 ```
 
 [![Github issues](https://img.shields.io/github/issues/ymkthr/Qiita-Viewer)](https://github.com/ymkthr/Qiita-Viewer/issues)
